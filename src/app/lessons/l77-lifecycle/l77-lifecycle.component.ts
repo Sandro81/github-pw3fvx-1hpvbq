@@ -32,4 +32,10 @@ export class L77LifecycleComponent implements OnInit, OnChanges {
     this.varNgOnChangesObject = changes + '';
   }
 
+
+incrementValue(){
+  this.varTestChanges++es + 1 
+}
+
+
 }
