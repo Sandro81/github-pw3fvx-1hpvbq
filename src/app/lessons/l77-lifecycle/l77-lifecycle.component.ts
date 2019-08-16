@@ -5,6 +5,7 @@ import {
   SimpleChanges,
   OnChanges,
   DoCheck,
+  AfterContentInit,
 } from '@angular/core';
 
 @Component({
@@ -12,19 +13,20 @@ import {
   templateUrl: './l77-lifecycle.component.html',
   styleUrls: ['./l77-lifecycle.component.css']
 })
-export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck {
+export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck, AfterContentInit {
 
   varConstructor: string = '';
   varNgOnInit: string = '';
   varNgDocheck: string = '';
+  varNgAfterContentInit: string = '';
+
   // ngOnChanges Variables
   varNgOnChanges: string = '';
   varNgOnChangesObjectFirstChange: string = '';
   varNgOnChangesObjectPreviousValue: string = '';
   varNgOnChangesObjectCurrentValue: string = '';
-
   @Input() varTestChanges: number = 0;
-
+  // ------
   constructor() {
     this.varConstructor = Date.now() + ' -> constructor was called!';
   }
@@ -43,6 +45,10 @@ export class L77LifecycleComponent implements OnInit, OnChanges, DoCheck {
 
   ngDoCheck() {
     this.varNgDocheck = Date.now() + ' -> ngDocheck was called!';
+  }
+
+  ngAfterContentInit() {
+    this.varNgAfterContentInit = Date.now() + ' -> ngAfterContentInit was called!';
   }
 
 
