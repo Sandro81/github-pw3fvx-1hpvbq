@@ -15,6 +15,8 @@ export class L77LifecycleComponent implements OnInit, OnChanges {
 
   varConstructor: string = '';
   varNgOnInit: string = '';
+
+  // ngOnChanges Variables
   varNgOnChanges: string = '';
   varNgOnChangesObject: string = '';
 
