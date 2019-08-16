@@ -1,8 +1,9 @@
 import {
   Component,
+  Input,
   OnInit,
   SimpleChanges,
-  OnChanges
+  OnChanges,
 } from '@angular/core';
 
 @Component({
@@ -17,7 +18,7 @@ export class L77LifecycleComponent implements OnInit, OnChanges {
   varNgOnChanges: string = '';
   varNgOnChangesObject: string = '';
 
-  varTestChanges: number = 0;
+  @Input() varTestChanges: number = 0;
 
   constructor() {
     this.varConstructor = Date.now() + ' -> constructor was called!';
@@ -30,6 +31,7 @@ export class L77LifecycleComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     this.varNgOnChanges = Date.now() + ' -> ngOnChanges was called!';
     this.varNgOnChangesObject = changes + '';
+    console.log(changes);
   }
 
 
