@@ -35,9 +35,7 @@ export class L77LifecycleComponent implements OnInit, OnChanges {
   }
 
 
-incrementValue(){
-  this.varTestChanges++; 
-}
+
 
 
 }

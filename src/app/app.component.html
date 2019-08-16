@@ -506,4 +506,9 @@ status 75 is -> {{status75}}
 <hr>
 <h3>Lesson 77 -> Seeing Lifecycle Hooks in Action</h3>
 
-<app-l77-lifecycle></app-l77-lifecycle>
+
+<button 
+type="button" 
+class="btn btn-outline-secondary"
+(click)="incrementValue()">Value++</button>
+<app-l77-lifecycle [varTestChanges]="varTestChanges"></app-l77-lifecycle>
