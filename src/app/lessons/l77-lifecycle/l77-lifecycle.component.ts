@@ -19,6 +19,7 @@ export class L77LifecycleComponent implements OnInit {
 
   ngOnInit() {
      this.varNgOnInit = 'constructor was called!' + Date.now();
+      this.varNgOnInit = 'constructor was called!' + Date.now();
   }
 
 }
