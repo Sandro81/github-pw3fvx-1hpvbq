@@ -34,7 +34,10 @@ export class L77LifecycleComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     this.varNgOnChanges = Date.now() + ' -> ngOnChanges was called!';
-    this.varNgOnChangesObject = 'changes.varTestChanges.firstChange -> ' + changes.varTestChanges.firstChange + '<br>changes.varTestChanges.previousValue -> ' + changes.varTestChanges.previousValue+'<br>changes.varTestChanges.currentValue -> ' + changes.varTestChanges.currentValue;
+    this.varNgOnChangesObjectFirstChange = 'changes.varTestChanges.firstChange -> ' + changes.varTestChanges.firstChange;
+    this.varNgOnChangesObjectPreviousValue = 'changes.varTestChanges.previousValue -> ' + changes.varTestChanges.previousValue;
+    this.varNgOnChangesObjectCurrentValue = 'changes.varTestChanges.currentValue -> ' + changes.varTestChanges.currentValue;
+
     console.log(changes);
   }
 
