@@ -59,7 +59,7 @@ varTestChanges: number = 0;
 
 incrementValue(){
   this.varTestChanges++; 
-}*/
+}
 
 // ......
 
